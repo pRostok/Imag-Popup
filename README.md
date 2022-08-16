@@ -1,5 +1,5 @@
 
-Caesars Cipher
+Image-Popup
 
 [LIVE DEMO](https://prostok.github.io/Imag-Popup/)
 
