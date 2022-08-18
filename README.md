@@ -1,7 +1,7 @@
 
 Image-Popup
 
-[LIVE DEMO](https://prostok.github.io/Imag-Popup/)
+[LIVE DEMO](https://prostok.github.io/Image-Popup/)
 
 🛠️ Built with
 
