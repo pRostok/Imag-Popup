@@ -8,12 +8,12 @@ const rightArrow = document.querySelector('.right-arrow')
 
 const createDivImg = (s) => {
 
-    let DivImg = '';
+    let DivTag = '';
 
     for (let i = 1; i <= s; i++) {
-        DivImg += `<div class="gallery-image"><img src="img/im${i}.png" alt="" class="image"></div>`;
+        DivTag += `<div class="gallery-image"><img src="img/im${i}.png" alt="" class="image"></div>`;
     }
-    document.querySelector('.gallery').innerHTML = DivImg;
+    document.querySelector('.gallery').innerHTML = DivTag;
 };
 createDivImg(12)
 
