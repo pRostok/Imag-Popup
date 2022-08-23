@@ -9,23 +9,37 @@
 }
 
 body {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: slategrey;
+    margin: 0;
+    padding: 0;
 }
 
-.intro {
+.filter {
     display: flex;
     position: absolute;
-    text-align: center;
     justify-content: center;
-    top: 20px;
-    font-size: 80px;
-    font-weight: 100;
-    color: rgb(0, 0, 0);
+    align-items: center;
+    top: 10%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.button {
+    border: 0;
+    border-radius: 4px;
+    padding: 8px 42px;
+    margin: 40px;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: flex;
+    position: relative;
 }
 
 .gallery {
@@ -33,10 +47,10 @@ body {
     height: 90vh;
     max-width: 1600px;
     max-height: 800px;
-    margin-top: 20%;
+    margin-top: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .gallery-image {
@@ -44,8 +58,8 @@ body {
     height: calc(50% - 20px);
     min-width: 300px;
     min-height: 200px;
-    margin: 10px;
     overflow: hidden;
+    padding-top: 30px;
 }
 
 .image {
@@ -171,4 +185,8 @@ body {
     height: 90%;
     object-fit: contain;
     opacity: 0;
+}
+
+.hide {
+    display: none;
 }

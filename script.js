@@ -8,14 +8,20 @@ const rightArrow = document.querySelector('.right-arrow')
 
 const createDivImg = (s) => {
 
-    let DivTag = '';
+    let NatureDiv = '';
+    let CatDiv = '';
+    let DogDiv = '';
 
     for (let i = 1; i <= s; i++) {
-        DivTag += `<div class="gallery-image"><img src="img/im${i}.png" alt="" class="image"></div>`;
+        NatureDiv += `<div class="gallery-image nat"><img src="FNat/nat${i}.png" alt="" class="image"></div>`;
+        CatDiv += `<div class="gallery-image cat"><img src="FCat/cat${i}.png" alt="" class="image"></div>`;
+        DogDiv += `<div class="gallery-image dog"><img src="FDog/dog${i}.png" alt="" class="image"></div>`;
     }
-    document.querySelector('.gallery').innerHTML = DivTag;
+    document.querySelector('.gallery').innerHTML = NatureDiv + CatDiv + DogDiv;  
+    
+
 };
-createDivImg(12)
+createDivImg(5)
 
 
 const images = document.querySelectorAll('.image');
@@ -30,9 +36,11 @@ images.forEach((item, i) => {
 })
 
 const updateImage = (i) => {
-    let path = `img/im${i + 1}.png`
-    largeImage.src = path
-    imageName.innerHTML = path
+   
+    let path = `img/im${i + 1}.png`;
+   
+    largeImage.src = path  
+    imageName.innerHTML = path  
     imageIndex.innerHTML = `0${i + 1}`
     index = i
 }
@@ -52,3 +60,58 @@ rightArrow.addEventListener('click', () => {
         updateImage(index + 1)
     }
 })
+
+
+
+
+function sort() {
+    const buttons = document.querySelectorAll('.button')
+    const imDivs = document.querySelectorAll('.gallery-image')
+
+    function filter(category, items) {
+        items.forEach((item) => {
+            const isItFiltered = !item.classList.contains(category)
+            const isShowAll = category.toLowerCase() === 'all'
+            if (isItFiltered && !isShowAll) {
+                item.classList.add('hide')
+            } else {
+                item.classList.remove('hide')
+            }
+        })
+    }
+
+    buttons.forEach((button) => {
+        button.addEventListener('click', () => {
+            const currentCategory = button.dataset.filter
+            filter(currentCategory, imDivs)
+            
+        })
+    })
+}
+
+sort()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
