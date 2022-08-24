@@ -13,5 +13,5 @@ Image-Popup
 
 - User integration 
 - Popup effect
-
+- Ability to sort pictures
 
